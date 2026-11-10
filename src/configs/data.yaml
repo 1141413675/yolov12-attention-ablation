@@ -1,0 +1,22 @@
+# 六分类垃圾检测数据集配置
+# 数据集不随仓库分发，clone 后需按下述目录结构自行准备：
+#
+#   dataset/garbage-classification/
+#     images/train  images/val  images/test
+#     labels/train  labels/val  labels/test
+#
+# 划分规模：train 6420 / val 2133 / test 1156
+
+train: ../dataset/garbage-classification/images/train
+val: ../dataset/garbage-classification/images/val
+test: ../dataset/garbage-classification/images/test
+
+nc: 6
+names: ['BIODEGRADABLE', 'CARDBOARD', 'GLASS', 'METAL', 'PAPER', 'PLASTIC']
+
+roboflow:
+  workspace: material-identification
+  project: garbage-classification-3
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/material-identification/garbage-classification-3/dataset/2

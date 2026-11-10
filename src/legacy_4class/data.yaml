@@ -1,0 +1,8 @@
+# 早期四分类阶段的 data.yaml（recyclable / kitchen / hazardous / other）
+# 原始文件中的训练机绝对路径已替换为相对路径；数据集不随仓库分发。
+train: ../dataset/4class/images/train
+val: ../dataset/4class/images/val
+test: ../dataset/4class/images/test
+
+nc: 4
+names: ["recyclable", "kitchen", "hazardous", "other"]
