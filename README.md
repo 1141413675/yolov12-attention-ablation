@@ -122,7 +122,9 @@ YOLOv12n 的骨干与 neck 中已经包含区域注意力（area attention）和
 
 ## 权重
 
-四个 `best.pt`（各约 5.3 MB）不放在仓库里，需要通过 GitHub Release 附件分发，或从作者处另行获取。若不提供，仓库只保留日志与图表。
+四个 `best.pt`（基线、CA、CBAM、SE，各约 5.3 MB）不纳入版本控制。目前它们只保存在本地，尚未发布到 Release，因此这里不提供下载链接。
+
+发布后计划以 Release 附件形式提供：`baseline_best.pt`、`CA_best.pt`、`CBAM_best.pt`、`SE_best.pt`。在此之前如需权重，请直接联系作者。
 
 ## 复现
 
