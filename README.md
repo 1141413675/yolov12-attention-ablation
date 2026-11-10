@@ -95,6 +95,7 @@ YOLOv12n 的骨干与 neck 中已经包含区域注意力（area attention）和
 2. 三组实验只保留了 `results.csv` 与 `results.png`；只有 SE 组保留了混淆矩阵、PR 曲线和验证集预测图，CA 与 CBAM 组没有。
 3. 训练时的模型结构配置（注入注意力模块的 `.yaml`）没有留存，`args.yaml` 指向的是原始 `yolo12n.pt`，按现有材料无法完整复现三组注意力的模型。
 4. `src/legacy_4class/` 下是更早的四分类阶段（recyclable / kitchen / hazardous / other）的两阶段训练脚本，与本文六分类 80 轮实验不是同一套配置。保留它们只为记录代码，不能用来复现上表结果。
+5. 原先由上述日志绘制的四组 mAP 对比曲线没有收入仓库：日志中同一轮次重复出现、行序错乱，按行绘制会得到锯齿状折线，图中三条注意力曲线也呈现出数值上不可能的差异。确认日志后再重新出图。
 
 ## 目录结构
 
@@ -115,7 +116,6 @@ YOLOv12n 的骨干与 neck 中已经包含区域注意力（area attention）和
 │   ├── CBAM/                    results.csv, results.png
 │   └── SE/                      results.csv, results.png, 混淆矩阵, PR 曲线, 验证集预测
 ├── results/
-│   ├── comparison_curves.png    四组 mAP 曲线对比
 │   └── yolov12_architecture.png 模型结构示意
 └── weights/                     权重不纳入版本控制，见下节
 ```
